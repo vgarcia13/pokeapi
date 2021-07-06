@@ -9,18 +9,18 @@ Dockerized python/django API REST application.
 
 ## Requirements
 
-- jq (for scripting part)
-  - INSTALLATION: 
-  `brew install jq`
+- Git
 - Docker
 
 ## How to use
 
-- Install jq (as shown above)
+- Install Git
 - Install Docker
 - Clone this repo
 - Build the container with `docker-compose build` command
 - Deploy the app with `docker-compose up` command
+- Run `docker exec -it pokeapiBackEnd sh pokeapi.sh` command (to generate .json and .csv files)
+
 
 ## Further Reading
 

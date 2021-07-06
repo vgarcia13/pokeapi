@@ -141,6 +141,7 @@ dmypy.json
 
 # Custom
 *.csv
+*.json
 /apps/cafeteria/employee_loader/photos
 
 

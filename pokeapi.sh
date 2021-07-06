@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "PokeAPI Earth Pokemon extractor!"
 echo "By: @vgarcia13"
@@ -12,8 +12,6 @@ curl -s --request GET -H "Content-Type:application/json" https://pokeapi.co/api/
 RESPONSE=`jq '.pokemon' pokeGround.json`
 
 echo  "${RESPONSE}" | jq -r '.[]|select(.slot==2) | [.pokemon.name, .pokemon.url] | @csv' >> twoslotgroundpokemons.csv
-sed -i '' '1i\
-"NAME","URL"
-' twoslotgroundpokemons.csv
+sed -i twoslotgroundpokemons.csv -e '1i\"NAME","URL"'
 
 echo "Done!"
